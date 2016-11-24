@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/foundation.min.css' />
+    <link rel='stylesheet' href='/stylesheets/wedding.css' />
+    <style>
+      #password {
+        font-size: 40px;
+        overflow: hidden;
+        color: white;
+        background-color: transparent;
+        border: none;
+        border-bottom: dotted white 2px;
+        text-align: center;
+      }
+
+      @media all and (min-width: 320px) {
+       .vertical-adjust {
+          margin-top:6em;
+        }
+      }
+      @media all and (min-width: 768px) {
+       .vertical-adjust {
+          margin-top:10em;
+        }
+      }
+    </style>
+  </head>
+  <body style="background-color: black; color: white; font-family: 'Josefin Sans'">
+    <div class="row">     
+      <div class="large-12 centre">
+        <form method="POST" action="/">
+          {{#errorMessage}}<p>{{errorMessage}}</p>{{/errorMessage}}
+          <input autocomplete="off" type="password" class="vertical-adjust" name="password" id="password">
+          <input type="submit" style="display:none">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
